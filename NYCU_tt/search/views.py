@@ -3,6 +3,5 @@ from django.http import HttpResponse
 from .models import Course
 
 # Create your views here.
-def show(request):
-    courses = Course.objects.all()
-    return render(request, "search/show.html", {"courses":courses})
+def home(request):
+    return render(request, "search/home.html")
