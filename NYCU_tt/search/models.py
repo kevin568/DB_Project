@@ -7,6 +7,9 @@ class Course(models.Model):
     semester = models.CharField(max_length = 20)
     time = models.CharField(max_length = 10)
     credit = models.DecimalField(max_digits = 2, decimal_places = 0)
+    def __str__(self):
+        return self.courseName
+
 
 class Experience(models.Model):
     course = models.ForeignKey(Course, on_delete = models.CASCADE, related_name = 'experience')

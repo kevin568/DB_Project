@@ -1,0 +1,22 @@
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>課程名稱</th>
+            <th>教授</th>
+            <th>學期</th>
+            <th>時間</th>
+            <th>學分</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in courses %}
+        <tr>
+            <td>{{i.courseName}}</td>
+            <td>{{i.professor}}</td>
+            <td>{{i.semester}}</td>
+            <td>{{i.time}}</td>
+            <td>{{i.credit}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
